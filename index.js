@@ -15,7 +15,7 @@ app.post("/", (req, res) => {
 
 // Register Api
 app.post("/register-api", (req, res) => {
-    con.query("SELECT * FROM `db`WHERE email=?", (req.body,email), (err, result) => {
+    con.query("SELECT * FROM `db`WHERE email=?", (req.body.email), (err, result) => {
         if (err) {
             throw err;
         }
